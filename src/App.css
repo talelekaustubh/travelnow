@@ -1,0 +1,178 @@
+/* General styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #004080;
+  color: white;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo img {
+  width: 40px;
+  margin-right: 0.5rem;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+}
+
+.navbar li {
+  margin: 0 1rem;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #ffd700;
+}
+
+/* Home Section */
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background: url('../images/home-bg.jpg') no-repeat center center/cover; */
+  height: 90vh;
+  color: white;
+  text-align: center;
+}
+
+.home-content h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px #000;
+}
+
+.home-content p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+/* About Section */
+.about {
+  padding: 4rem 2rem;
+  background-color: #f2f2f2;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  color: #004080;
+}
+
+.about p {
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  line-height: 1.6;
+}
+
+/* Destinations Section */
+.destinations {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.destinations h2 {
+  font-size: 2.5rem;
+  color: #004080;
+  margin-bottom: 2rem;
+}
+
+.destination-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.destination {
+  width: 250px;
+  margin: 1rem;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.destination:hover {
+  transform: translateY(-5px);
+}
+
+.destination img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.destination h3 {
+  margin: 1rem 0 0.5rem;
+  color: #333;
+}
+
+.destination p {
+  padding: 0 1rem 1rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Contact Section */
+.contact {
+  padding: 4rem 2rem;
+  background-color: #f2f2f2;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  color: #004080;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 2rem auto;
+}
+
+.contact input, .contact textarea {
+  margin: 0.5rem 0;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact button {
+  padding: 0.8rem;
+  font-size: 1rem;
+  color: white;
+  background-color: #004080;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact button:hover {
+  background-color: #ffd700;
+}
