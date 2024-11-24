@@ -1,6 +1,6 @@
 FROM node:alpine3.19
 
-WORKDIR /src/App
+WORKDIR /app
 
 LABEL MAINTAINER="sksupremeboss"
 
