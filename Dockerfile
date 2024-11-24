@@ -12,5 +12,5 @@ COPY . .
 
 EXPOSE 5000
 
-CMD["node","App.js"]
+CMD ["node","App.js"]
 
