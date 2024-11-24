@@ -1,16 +1,45 @@
-FROM node:alpine3.19
+# FROM node:alpine3.19
 
+# WORKDIR /app
+
+# LABEL MAINTAINER="sksupremeboss"
+
+# COPY package*.json ./
+
+# RUN npm install
+
+# COPY . .
+
+# EXPOSE 5000
+
+# CMD ["node","App.js"]
+
+# Step 1: Use Node.js image to build the app
+FROM node:16 AS build
+
+# Set working directory
 WORKDIR /app
 
-LABEL MAINTAINER="sksupremeboss"
-
+# Copy package.json and package-lock.json
 COPY package*.json ./
 
+# Install dependencies
 RUN npm install
 
+# Copy the rest of the application code
 COPY . .
 
-EXPOSE 5000
+# Build the React app for production
+RUN npm run build
 
-CMD ["node","App.js"]
+# Step 2: Use Nginx to serve the app
+FROM nginx:alpine
 
+# Copy the build files to Nginx's default public directory
+COPY --from=build /app/build /usr/share/nginx/html
+
+# Expose port 80
+EXPOSE 80
+
+# Start Nginx server
+CMD ["nginx", "-g", "daemon off;"]
