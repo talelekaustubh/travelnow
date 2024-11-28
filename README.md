@@ -27,9 +27,30 @@ Before you begin, ensure that you have the following installed on your local mac
 
 ### 1. Clone the Repository
 
-Clone the repository to your local machine if you haven’t done so already.
+Clone the repository to your ec2 instance or local machine if you haven’t done so already.
 ```bash
 git clone https://github.com/talelekaustubh/travelnow.git
 cd travelnow
 ```
+
+### 2. Create Dockerfile
+
+'''bash
+FROM node:18-alpine
+
+WORKDIR /app
+
+COPY package*.json ./
+
+RUN npm install
+
+COPY . .
+
+# Build the React app
+RUN npm run build   
+
+EXPOSE 3000
+
+CMD ["npm", "start"]
+'''
 
