@@ -28,4 +28,8 @@ Before you begin, ensure that you have the following installed on your local mac
 ### 1. Clone the Repository
 
 Clone the repository to your local machine if you haven’t done so already.
+```bash
+git clone https://github.com/talelekaustubh/travelnow.git
+cd travelnow
+```
 
