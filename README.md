@@ -36,6 +36,7 @@ cd travelnow
 ### 2. Create Dockerfile
 
 '''bash
+
 FROM node:18-alpine
 
 WORKDIR /app
