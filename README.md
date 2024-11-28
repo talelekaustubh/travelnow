@@ -34,8 +34,7 @@ cd travelnow
 ```
 
 ### 2. Create Dockerfile
-
-'''bash
+```bash
 
 FROM node:18-alpine
 
@@ -52,5 +51,28 @@ RUN npm run build  
 EXPOSE 3000
 
 CMD ["npm", "start"]
-'''
+```
+
+### 3.Build the Docker Image
+
+In the terminal, navigate to the directory where the Dockerfile is located and run the following command to build the Docker image:
+
+```bash
+docker build -t travelnow .
+```
+
+### 4. Run the Docker Container
+
+Once the image is built, run the following command to start the container:
+
+```bash
+docker run -p 3000:3000 travelnow
+```
+
+### 5. Access the App in Your Browser
+
+Open your browser and visit your_instance_ip:3000 or visit http://localhost on local machine. You should see the React app running from the Docker container.
+
+
+
 
