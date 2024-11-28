@@ -46,7 +46,6 @@ RUN npm install
 
 COPY . .
 
-# Build the React app
 RUN npm run build   
 
 EXPOSE 3000
